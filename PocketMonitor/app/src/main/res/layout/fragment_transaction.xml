@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/money_in_pocket"
+        android:id="@+id/tran_pocketmoney"
+        android:layout_marginTop="40dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tran_dateWrapper"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/tran_pocketmoney"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+    <TextView
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tran_date"
+        android:layout_alignTop="@+id/tran_date"
+        android:id="@+id/tran_calender"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+        android:textColor="?attr/editTextColor" />
+    </android.support.design.widget.TextInputLayout>
+
+    <RadioGroup
+        android:layout_below="@+id/tran_dateWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@+id/tran_dateWrapper"
+        android:id="@+id/tran_group_type">
+
+        <RadioButton
+            android:id="@+id/tran_radio_spent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:text="@string/spent"
+            android:checked="true"
+            android:textAlignment="viewStart" />
+
+
+        <RadioButton
+            android:id="@+id/tran_radio_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/received"/>
+    </RadioGroup>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tran_categoryWrapper"
+        android:layout_below="@+id/tran_group_type"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="viewStart"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+        <AutoCompleteTextView
+            style="@android:style/Widget.DeviceDefault.Light.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tran_category"
+            android:inputType="textAutoComplete|textAutoCorrect"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tran_reasonWrapper"
+        android:layout_below="@+id/tran_categoryWrapper"
+        android:layout_marginTop="30dp"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+        <EditText
+            android:id="@+id/tran_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/where_spent"
+            android:inputType="textAutoCorrect"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tran_amountWrapper"
+        android:layout_marginTop="30dp"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+        android:layout_below="@+id/tran_reasonWrapper">
+
+        <EditText
+            android:id="@+id/tran_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount"
+            android:inputType="numberDecimal" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/submit"
+        android:id="@+id/tran_submit"
+        android:layout_below="@+id/tran_amountWrapper"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:elevation="2dp"
+        android:textAppearance="@android:style/TextAppearance.Material"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="?android:attr/textColorPrimaryInverse" />
+
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PocketMonitor</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="not_a_user_register">Not a user? Register!</string>
+    <string name="invalid_email">Invalid email!</string>
+    <string name="invalid_password">Invalid password!</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_a_user_login">Already a user? Login!</string>
+    <string name="name_required">Name required!</string>
+    <string name="password_required">Password required!</string>
+    <string name="please_confrim_password">Please confirm password!</string>
+    <string name="passwords_do_not_match">Passwords do not match!</string>
+    <string name="register">Register</string>
+    <string name="chart">Chart</string>
+    <string name="logout">Logout</string>
+    <string name="date">Date:</string>
+    <string name="spent">Spent</string>
+    <string name="received">Received</string>
+    <string name="where_spent">Where did you spend the money?</string>
+    <string name="where_received">Where did you receive the money?</string>
+    <string name="amount">Amount</string>
+    <string name="submit">Submit</string>
+    <string name="rupee">₹</string>
+    <string name="money_in_pocket">Money in Pocket = ₹</string>
+    <string name="category">Category</string>
+    <string name="zero">0.00</string>
+</resources>
